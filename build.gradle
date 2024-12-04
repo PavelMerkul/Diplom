@@ -1,19 +1,27 @@
 plugins {
     id 'java'
-}
+    id 'io.qameta.allure' version '2.8.1'
+    }
 
-group = 'ru.netology.javaqa'
-version = '1.0-SNAPSHOT'
+group 'ru.netology'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
 
 repositories {
     mavenCentral()
 }
 
+allure {
+
+}
+
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+
 }
 
 test {
-    useJUnitPlatform()
+
 }
